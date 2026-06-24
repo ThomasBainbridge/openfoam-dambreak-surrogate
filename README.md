@@ -8,6 +8,8 @@ A CFD and data-driven surrogate modelling study. Starting from the standard Open
 
 ## Problem
 
+> Governing equations: [EQUATIONS.md](EQUATIONS.md)
+
 A dam-break releases a column of water that accelerates across a channel floor and impacts an obstacle. The transient hydraulic load on the obstacle — peak pressure, pressure impulse, and wetting time — depends on the geometry of the water column and the obstacle. The goal is to map this dependence efficiently using high-fidelity CFD data and surrogate models.
 
 **Physics:** two-phase water–air flow, gravity-driven, solved with the VOF method (`alpha.water` volume fraction).  
