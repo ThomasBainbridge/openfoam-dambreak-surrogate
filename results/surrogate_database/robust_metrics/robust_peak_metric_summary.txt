@@ -1,0 +1,76 @@
+Robust peak metric summary
+==========================
+
+Cases processed: 403
+
+area_average_p_rgh_top_0p01_mean_Pa
+-----------------------------------
+  min: 1053.55
+  max: 5284.18
+  max case: surrGrid_H0365_obsH0042_x0250
+    H=0.365, h=0.042, x=0.25
+  min case: surrGrid_H0240_obsH0030_x0220
+    H=0.24, h=0.03, x=0.22
+
+area_average_p_rgh_top_0p05_mean_Pa
+-----------------------------------
+  min: 889.48
+  max: 2264.45
+  max case: surrGrid_H0365_obsH0060_x0250
+    H=0.365, h=0.06, x=0.25
+  min case: surrGrid_H0240_obsH0030_x0220
+    H=0.24, h=0.03, x=0.22
+
+area_average_p_rgh_rolling_0p025s_peak_mean_Pa
+----------------------------------------------
+  min: 983.122
+  max: 2812.71
+  max case: surrGrid_H0365_obsH0042_x0250
+    H=0.365, h=0.042, x=0.25
+  min case: surrGrid_H0240_obsH0030_x0220
+    H=0.24, h=0.03, x=0.22
+
+area_average_p_rgh_rolling_0p05s_peak_mean_Pa
+---------------------------------------------
+  min: 905.413
+  max: 2033.32
+  max case: surrGrid_H0340_obsH0066_x0380
+    H=0.34, h=0.066, x=0.38
+  min case: surrGrid_H0240_obsH0030_x0220
+    H=0.24, h=0.03, x=0.22
+
+maximum_p_rgh_top_0p01_mean_Pa
+------------------------------
+  min: 3371.88
+  max: 10092
+  max case: surrGrid_H0365_obsH0042_x0250
+    H=0.365, h=0.042, x=0.25
+  min case: surrGrid_H0240_obsH0030_x0220
+    H=0.24, h=0.03, x=0.22
+
+maximum_p_rgh_top_0p05_mean_Pa
+------------------------------
+  min: 2760.92
+  max: 5897.96
+  max case: surrGrid_H0365_obsH0072_x0380
+    H=0.365, h=0.072, x=0.38
+  min case: surrGrid_H0240_obsH0030_x0220
+    H=0.24, h=0.03, x=0.22
+
+maximum_p_rgh_rolling_0p025s_peak_mean_Pa
+-----------------------------------------
+  min: 3168.67
+  max: 6225.11
+  max case: surrGrid_H0365_obsH0072_x0380
+    H=0.365, h=0.072, x=0.38
+  min case: surrGrid_H0240_obsH0030_x0220
+    H=0.24, h=0.03, x=0.22
+
+maximum_p_rgh_rolling_0p05s_peak_mean_Pa
+----------------------------------------
+  min: 2909.8
+  max: 5544.6
+  max case: surrGrid_H0365_obsH0072_x0380
+    H=0.365, h=0.072, x=0.38
+  min case: surrGrid_H0240_obsH0030_x0220
+    H=0.24, h=0.03, x=0.22

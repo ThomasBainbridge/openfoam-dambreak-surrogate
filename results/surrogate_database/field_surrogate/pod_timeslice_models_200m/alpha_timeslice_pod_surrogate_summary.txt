@@ -1,0 +1,28 @@
+Time-sliced alpha.water POD field surrogate summary
+===================================================
+
+Grid: 96 x 96
+Training snapshots: 20923
+Validation snapshots: 3660
+POD modes: 200
+Time slices: 61
+KNN neighbours per time slice: 6
+
+POD energy:
+  cumulative explained variance, 40 modes: 0.808793
+  cumulative explained variance, 80 modes: 0.876991
+  cumulative explained variance, 120 modes: 0.907284
+  cumulative explained variance, 160 modes: 0.924859
+  cumulative explained variance, 200 modes: 0.935837
+
+Validation reconstruction error:
+  mean alpha RMSE: 0.091201
+  median alpha RMSE: 0.094932
+  95th percentile alpha RMSE: 0.137810
+  mean alpha MAE: 0.028640
+  median alpha MAE: 0.029259
+
+Model files:
+  /mnt/c/Users/thoma/Desktop/damBreak_interFoam_laminar/results/surrogate_database/field_surrogate/pod_timeslice_models_200m/alpha_timeslice_incremental_pca.joblib
+  /mnt/c/Users/thoma/Desktop/damBreak_interFoam_laminar/results/surrogate_database/field_surrogate/pod_timeslice_models_200m/alpha_timeslice_pod_surrogate.joblib
+  /mnt/c/Users/thoma/Desktop/damBreak_interFoam_laminar/results/surrogate_database/field_surrogate/pod_timeslice_models_200m/alpha_timeslice_validation_errors.csv

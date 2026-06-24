@@ -1,0 +1,11 @@
+{
+  "n_cases": 403,
+  "n_snapshots": 24583,
+  "nx": 96,
+  "ny": 96,
+  "domain_length_m": 0.584,
+  "domain_height_m": 0.584,
+  "time_stride": 1,
+  "snapshot_memmap": "/mnt/c/Users/thoma/Desktop/damBreak_interFoam_laminar/results/surrogate_database/field_surrogate/alpha_snapshots_float32.dat",
+  "snapshot_metadata_csv": "/mnt/c/Users/thoma/Desktop/damBreak_interFoam_laminar/results/surrogate_database/field_surrogate/alpha_snapshot_metadata.csv"
+}

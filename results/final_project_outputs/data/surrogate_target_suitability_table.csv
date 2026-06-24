@@ -1,0 +1,7 @@
+target,suitability,reason
+Area-average pressure impulse,Strong,Integrated pressure metric; less sensitive to isolated pressure spikes.
+Maximum-pressure impulse,Strong,Integrated local loading metric; captures accumulated impact severity.
+Rolling peak pressure,Strong,Time-windowed peak metric reduces sensitivity to single-sample transients.
+Distributed wetting time,Strong,Event timing is physically interpretable and relatively smooth across the design space.
+Raw instantaneous peak pressure,Weak,Highly event-driven and sensitive to local transient impact behaviour.
+Full alpha.water field reconstruction,Moderate,POD captures dominant free-surface motion but smooths sharp moving VOF interfaces.

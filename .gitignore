@@ -1,0 +1,18 @@
+# Large simulation database (~27 GB) - do not commit
+parametric_study/surrogate_database_cases/
+
+# Large field snapshot memmap
+results/surrogate_database/field_surrogate/alpha_snapshots_float32.dat
+
+# Intermediate frame images (GIFs are kept, raw frames are not)
+results/surrogate_database/portfolio_media/frames/
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# OS artefacts
+.DS_Store
+Thumbs.db

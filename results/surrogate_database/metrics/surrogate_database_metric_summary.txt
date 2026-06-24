@@ -1,0 +1,54 @@
+Surrogate database metric extraction summary
+===========================================
+
+Successful cases: 403
+Failed extractions: 0
+
+Successful cases by split:
+  training_grid: 343
+  validation_lhs: 60
+
+peak_area_average_p_rgh_Pa
+--------------------------
+  min: 1107.5
+  max: 12454.2
+  max case: surrGrid_H0365_obsH0042_x0250
+    H=0.365, h=0.042, x=0.25
+  min case: surrGrid_H0240_obsH0030_x0220
+    H=0.24, h=0.03, x=0.22
+
+peak_maximum_p_rgh_Pa
+---------------------
+  min: 3443.62
+  max: 19100.8
+  max case: surrGrid_H0365_obsH0042_x0250
+    H=0.365, h=0.042, x=0.25
+  min case: surrGrid_H0240_obsH0030_x0220
+    H=0.24, h=0.03, x=0.22
+
+area_average_pressure_impulse_Pa_s
+----------------------------------
+  min: 746.439
+  max: 1493.19
+  max case: surrGrid_H0365_obsH0060_x0250
+    H=0.365, h=0.06, x=0.25
+  min case: surrGrid_H0250_obsH0066_x0380
+    H=0.25, h=0.066, x=0.38
+
+maximum_pressure_impulse_Pa_s
+-----------------------------
+  min: 1374.67
+  max: 2634.37
+  max case: surrGrid_H0365_obsH0042_x0250
+    H=0.365, h=0.042, x=0.25
+  min case: surrGrid_H0240_obsH0030_x0220
+    H=0.24, h=0.03, x=0.22
+
+first_distributed_wetting_time_s
+--------------------------------
+  min: 0.14
+  max: 0.615
+  max case: surrGrid_H0250_obsH0066_x0380
+    H=0.25, h=0.066, x=0.38
+  min case: surrGrid_H0240_obsH0030_x0220
+    H=0.24, h=0.03, x=0.22

@@ -1,0 +1,37 @@
+Final surrogate result interpretation
+=====================================
+
+Recommended final surrogate targets:
+
+- Area-average 0.050 s rolling peak pressure [Pa]
+  Model: rbf_svr with log1p target
+  Validation R2: 0.938246
+  Validation normalised RMSE: 6.167%
+
+- Local maximum 0.025 s rolling peak pressure [Pa]
+  Model: poly3_ridge with raw target
+  Validation R2: 0.983782
+  Validation normalised RMSE: 3.218%
+
+- Local maximum 0.050 s rolling peak pressure [Pa]
+  Model: poly3_ridge with log1p target
+  Validation R2: 0.996974
+  Validation normalised RMSE: 1.491%
+
+- Area-average pressure impulse [Pa s]
+  Model: poly3_ridge with log1p target
+  Validation R2: 0.980356
+  Validation normalised RMSE: 3.665%
+
+- Maximum-pressure impulse [Pa s]
+  Model: knn_distance with log1p target
+  Validation R2: 0.967396
+  Validation normalised RMSE: 4.149%
+
+- First distributed wetting time [s]
+  Model: gaussian_process_matern with raw target
+  Validation R2: 0.973518
+  Validation normalised RMSE: 5.293%
+
+Interpretation:
+  The raw instantaneous peak-pressure quantities were difficult to learn because they are controlled by short-duration transient events. The more physically robust outputs, especially rolling peak pressures, pressure impulses, and distributed wetting time, produced substantially better validation performance on the 60 off-grid validation cases.

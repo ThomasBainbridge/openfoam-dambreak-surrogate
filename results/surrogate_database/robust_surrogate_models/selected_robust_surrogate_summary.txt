@@ -1,0 +1,104 @@
+Selected robust surrogate models
+================================
+
+Training cases: 343
+Validation cases: 60
+
+Area-average top 1% pressure [Pa]
+---------------------------------
+Model: poly3_ridge with raw target
+Validation RMSE: 588.886
+Validation MAE: 428.981
+Validation normalised RMSE: 21.448%
+Validation R2: 0.147362
+Validation max absolute error: 1978.07
+
+Area-average top 5% pressure [Pa]
+---------------------------------
+Model: poly3_ridge with raw target
+Validation RMSE: 122.377
+Validation MAE: 88.7207
+Validation normalised RMSE: 11.249%
+Validation R2: 0.708194
+Validation max absolute error: 440.147
+
+Area-average 0.025 s rolling peak pressure [Pa]
+-----------------------------------------------
+Model: knn_distance with log1p target
+Validation RMSE: 148.846
+Validation MAE: 79.1867
+Validation normalised RMSE: 13.416%
+Validation R2: 0.578116
+Validation max absolute error: 806.213
+
+Area-average 0.050 s rolling peak pressure [Pa]
+-----------------------------------------------
+Model: rbf_svr with log1p target
+Validation RMSE: 47.6351
+Validation MAE: 24.6311
+Validation normalised RMSE: 6.167%
+Validation R2: 0.938246
+Validation max absolute error: 293.726
+
+Local maximum top 1% pressure [Pa]
+----------------------------------
+Model: knn_distance with log1p target
+Validation RMSE: 661.08
+Validation MAE: 434.005
+Validation normalised RMSE: 16.215%
+Validation R2: 0.304216
+Validation max absolute error: 2809.68
+
+Local maximum top 5% pressure [Pa]
+----------------------------------
+Model: poly3_ridge with raw target
+Validation RMSE: 159.754
+Validation MAE: 110.925
+Validation normalised RMSE: 7.775%
+Validation R2: 0.897089
+Validation max absolute error: 688.945
+
+Local maximum 0.025 s rolling peak pressure [Pa]
+------------------------------------------------
+Model: poly3_ridge with raw target
+Validation RMSE: 60.4314
+Validation MAE: 37.1121
+Validation normalised RMSE: 3.218%
+Validation R2: 0.983782
+Validation max absolute error: 234.742
+
+Local maximum 0.050 s rolling peak pressure [Pa]
+------------------------------------------------
+Model: poly3_ridge with log1p target
+Validation RMSE: 27.3291
+Validation MAE: 21.0292
+Validation normalised RMSE: 1.491%
+Validation R2: 0.996974
+Validation max absolute error: 70.7074
+
+Area-average pressure impulse [Pa s]
+------------------------------------
+Model: poly3_ridge with log1p target
+Validation RMSE: 19.1806
+Validation MAE: 14.7998
+Validation normalised RMSE: 3.665%
+Validation R2: 0.980356
+Validation max absolute error: 70.117
+
+Maximum-pressure impulse [Pa s]
+-------------------------------
+Model: knn_distance with log1p target
+Validation RMSE: 42.6556
+Validation MAE: 34.7255
+Validation normalised RMSE: 4.149%
+Validation R2: 0.967396
+Validation max absolute error: 93.0926
+
+First distributed wetting time [s]
+----------------------------------
+Model: gaussian_process_matern with raw target
+Validation RMSE: 0.0235536
+Validation MAE: 0.0149635
+Validation normalised RMSE: 5.293%
+Validation R2: 0.973518
+Validation max absolute error: 0.076575

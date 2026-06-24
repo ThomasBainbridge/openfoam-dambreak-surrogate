@@ -1,0 +1,26 @@
+Surrogate CFD database design
+=============================
+
+Training cases:   343
+Validation cases: 60
+Total cases:      403
+
+Active input variables:
+  Initial water height H: 0.240 to 0.365 m
+  Obstacle height h:      0.030 to 0.072 m
+  Obstacle front x:       0.220 to 0.380 m
+
+Training design:
+  7 x 7 x 7 structured full-factorial grid = 343 cases.
+
+Validation design:
+  60 off-grid Latin-hypercube-style validation cases.
+
+Simulation settings:
+  endTime = 1.5 s
+  full-field writeInterval = 0.025 s
+  obstacle metric writeInterval = 0.005 s
+
+Purpose:
+  Build a sufficiently dense CFD database for Gaussian process, radial-basis,
+  support-vector, tree-based, and ensemble surrogate models.

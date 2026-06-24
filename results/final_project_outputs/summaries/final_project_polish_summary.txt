@@ -1,0 +1,46 @@
+Final project polish summary
+========================================================================
+
+200-mode time-sliced POD field surrogate validation
+------------------------------------------------------------------------
+Validation cases evaluated:       60
+Validation snapshots evaluated:   3660
+POD modes:                        200
+Common grid:                      96 x 96
+
+Snapshot-level alpha.water reconstruction error:
+  Mean RMSE:                      0.091201
+  Median RMSE:                    0.094932
+  95th percentile RMSE:           0.137810
+  Mean MAE:                       0.028640
+  95th percentile MAE:            0.048418
+
+Interface and water-region metrics:
+  Mean phase-mask IoU:            0.850850
+  Mean interface-front MAE:       0.083888 m
+  95th percentile front MAE:      0.223868 m
+  Mean relative volume error:     0.017825
+
+POD explained variance:
+  50 modes:                       0.833188
+  100 modes:                      0.894454
+  150 modes:                      0.921216
+  200 modes:                      0.935837
+
+Best validation case by mean RMSE:
+  surrVal_021_H0245_obsH0042_x0375 | mean RMSE = 0.068333
+
+Worst validation case by mean RMSE:
+  surrVal_034_H0357_obsH0039_x0234 | mean RMSE = 0.131556
+
+Coefficient-regressor comparison:
+     model  mean_field_rmse  median_field_rmse  p95_field_rmse  mean_field_mae  mean_coefficient_rmse
+ExtraTrees         0.089652           0.093240        0.138636        0.027979               0.467141
+       KNN         0.091201           0.094932        0.137810        0.028640               0.483768
+
+Final interpretation:
+  The robust scalar impact quantities are the strongest surrogate targets.
+  The POD field surrogate captures the dominant free-surface evolution but
+  should be presented as an approximate reduced-order reconstruction rather
+  than a full CFD replacement. The interface and phase-mask metrics quantify
+  this limitation directly.
