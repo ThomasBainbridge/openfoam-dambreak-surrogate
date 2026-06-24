@@ -2,7 +2,7 @@
 
 ![CFD vs POD surrogate free-surface reconstruction](results/final_project_outputs/gifs/FINAL_cfd_vs_pod_surrogate_alpha_field.gif)
 
-A portfolio-quality CFD and data-driven surrogate modelling study. Starting from the standard OpenFOAM `interFoam` laminar dam-break tutorial, this project builds a fully automated 403-case VOF simulation database, extracts robust impact-pressure and wetting metrics, trains scalar surrogate models for design-space exploration, and develops a POD reduced-order field surrogate for free-surface reconstruction on unseen validation cases.
+A CFD and data-driven surrogate modelling study. Starting from the standard OpenFOAM `interFoam` laminar dam-break tutorial, this project builds a fully automated 403-case VOF simulation database, extracts robust impact-pressure and wetting metrics, trains scalar surrogate models for design-space exploration, and develops a POD reduced-order field surrogate for free-surface reconstruction on unseen validation cases.
 
 ---
 
@@ -84,7 +84,7 @@ The POD surrogate captures the dominant free-surface evolution but is an approxi
 
 ---
 
-## Portfolio Media
+## Key Outputs
 
 | File | Description |
 |---|---|
@@ -107,7 +107,7 @@ results/
     robust_surrogate_models/      Trained scalar surrogate model artefacts
     field_surrogate/              POD model files and snapshot dataset
     final_surrogate_plots/        Response surface contour plots
-    portfolio_media/              GIFs and frames
+    media/                        GIFs and frames
 parametric_study/
   surrogate_database_cases/       403 OpenFOAM case directories (~27 GB, not tracked)
 ```
