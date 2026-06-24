@@ -152,7 +152,7 @@ parametric_study/
 
 ## Tech Stack
 
-- **CFD:** OpenFOAM `interFoam` (VOF, two-phase)
+- **CFD:** OpenFOAM v2312, `interFoam` solver (VOF, two-phase)
 - **Surrogate models:** scikit-learn — polynomial ridge regression, RBF SVR, KNN, Gaussian process, ExtraTrees, random forest, gradient boosting
 - **POD / dimensionality reduction:** scikit-learn `IncrementalPCA`
 - **Numerics:** NumPy, SciPy
