@@ -8,13 +8,45 @@ A CFD and data-driven surrogate modelling study. Starting from the standard Open
 
 ## Problem
 
-> Governing equations: [EQUATIONS.md](EQUATIONS.md)
-
 A dam-break releases a column of water that accelerates across a channel floor and impacts an obstacle. The transient hydraulic load on the obstacle — peak pressure, pressure impulse, and wetting time — depends on the geometry of the water column and the obstacle. The goal is to map this dependence efficiently using high-fidelity CFD data and surrogate models.
 
 **Physics:** two-phase water–air flow, gravity-driven, solved with the VOF method (`alpha.water` volume fraction).  
 **Solver:** OpenFOAM `interFoam`, laminar, 2-D.  
 **End time:** 1.5 s per simulation.
+
+---
+
+## Governing Equations
+
+The `interFoam` solver uses a Volume of Fluid (VOF) method to track the water–air interface.
+
+**Volume fraction transport**
+
+$$\frac{\partial \alpha}{\partial t} + \nabla \cdot (\alpha \mathbf{U}) + \nabla \cdot \left[\alpha(1-\alpha)\mathbf{U}_r\right] = 0$$
+
+The third term is the interface-compression term that keeps the interface sharp without explicit reconstruction. $\mathbf{U}_r$ is active only where $\alpha(1-\alpha) \neq 0$.
+
+**Mixture properties**
+
+$$\rho = \alpha\rho_w + (1-\alpha)\rho_a \qquad \mu = \alpha\mu_w + (1-\alpha)\mu_a$$
+
+**Continuity**
+
+$$\nabla \cdot \mathbf{U} = 0$$
+
+**Momentum**
+
+$$\frac{\partial (\rho \mathbf{U})}{\partial t} + \nabla \cdot (\rho \mathbf{U} \otimes \mathbf{U}) = -\nabla p + \nabla \cdot \left[\mu \left(\nabla \mathbf{U} + \nabla \mathbf{U}^T\right)\right] + \rho \mathbf{g} + \mathbf{f}_\sigma$$
+
+**Surface tension force** (Continuum Surface Force model, Brackbill et al. 1992)
+
+$$\mathbf{f}_\sigma = \sigma \kappa \nabla \alpha$$
+
+**OpenFOAM modified pressure**
+
+$$p_{rgh} = p - \rho \mathbf{g} \cdot \mathbf{x}$$
+
+$p_{rgh}$ subtracts the hydrostatic contribution, improving solver conditioning. $\alpha$: water volume fraction; $\mathbf{U}$: velocity; $\rho$: mixture density; $\mu$: dynamic viscosity; $\sigma$: surface tension coefficient; $\kappa$: interface curvature; $\mathbf{g}$: gravity; $\mathbf{x}$: position vector.
 
 ---
 
