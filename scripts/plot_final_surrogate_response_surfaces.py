@@ -121,8 +121,11 @@ def make_performance_plot(selected_rows: list[dict[str, str]]) -> None:
     ax.set_title("Selected final surrogate validation error")
     ax.grid(True, axis="x", alpha=0.3)
 
+    nrmse_max = max(nrmse_percent)
+    ax.set_xlim(0.0, nrmse_max * 1.22)
+
     for index, value in enumerate(nrmse_percent):
-        ax.text(value + 0.15, index, f"{value:.2f}%", va="center")
+        ax.text(value + nrmse_max * 0.015, index, f"{value:.2f}%", va="center")
 
     fig.tight_layout()
     fig.savefig(OUTPUT_DIR / "final_selected_surrogate_validation_nrmse.png", dpi=300)
@@ -136,12 +139,12 @@ def make_performance_plot(selected_rows: list[dict[str, str]]) -> None:
     ax.invert_yaxis()
 
     ax.set_xlabel("Validation R²")
-    ax.set_xlim(0.0, 1.05)
+    ax.set_xlim(0.0, 1.12)
     ax.set_title("Selected final surrogate validation R²")
     ax.grid(True, axis="x", alpha=0.3)
 
     for index, value in enumerate(r2_values):
-        ax.text(value + 0.01, index, f"{value:.3f}", va="center")
+        ax.text(value + 0.005, index, f"{value:.3f}", va="center")
 
     fig.tight_layout()
     fig.savefig(OUTPUT_DIR / "final_selected_surrogate_validation_r2.png", dpi=300)
