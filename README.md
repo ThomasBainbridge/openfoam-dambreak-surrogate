@@ -161,6 +161,12 @@ parametric_study/
 
 ---
 
+## Reproduction
+
+The curated outputs (figures, GIFs, validation metrics, and extracted CFD metrics) are all included and can be explored directly. Fully re-running the pipeline requires the 27 GB OpenFOAM simulation database (excluded from version control) and OpenFOAM v2312 for the CFD step. The alpha-field snapshot memmap needed to re-train the POD surrogate is also excluded due to size. Python dependencies: `pip install -r requirements.txt`.
+
+---
+
 ## Future Work
 
 Future work will focus on improving the field surrogate using local POD, Gaussian-process coefficient models, or nonlinear autoencoder-based reconstruction, while keeping the workflow physically interpretable and validated against CFD.
