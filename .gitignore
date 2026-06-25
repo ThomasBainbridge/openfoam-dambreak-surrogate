@@ -1,8 +1,9 @@
 # Large simulation database (~27 GB) - do not commit
 parametric_study/surrogate_database_cases/
 
-# Large field snapshot memmap
+# Large field snapshot memmap and trained model binaries
 results/surrogate_database/field_surrogate/alpha_snapshots_float32.dat
+*.joblib
 
 # Intermediate working media (final curated outputs are in results/final_project_outputs/)
 results/surrogate_database/portfolio_media/
