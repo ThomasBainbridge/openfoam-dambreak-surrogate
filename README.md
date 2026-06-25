@@ -2,7 +2,7 @@
 
 ![CFD vs POD surrogate free-surface reconstruction](results/final_project_outputs/gifs/FINAL_cfd_vs_pod_surrogate_alpha_field.gif)
 
-A CFD and data-driven surrogate modelling study. Starting from the standard OpenFOAM `interFoam` laminar dam-break tutorial, this project builds a fully automated 403-case VOF simulation database, extracts robust impact-pressure and wetting metrics, trains scalar surrogate models for design-space exploration, and develops a POD reduced-order field surrogate for free-surface reconstruction on unseen validation cases.
+A CFD and data-driven surrogate modelling study. Starting from the standard OpenFOAM `interFoam` laminar dam-break tutorial, this project builds a fully automated 403-case 2-D VOF simulation database, extracts robust impact-pressure and wetting metrics, trains scalar surrogate models for design-space exploration, and develops a POD reduced-order field surrogate for free-surface reconstruction on unseen validation cases.
 
 ---
 
@@ -56,9 +56,9 @@ Three geometric parameters were varied. Obstacle width was fixed.
 
 | Parameter | Symbol | Range |
 |---|---|---|
-| Initial water-column height | H | varied |
-| Obstacle height | h | varied |
-| Obstacle front position | x | varied |
+| Initial water-column height | H | 0.240 – 0.365 m |
+| Obstacle height | h | 0.030 – 0.072 m |
+| Obstacle front position | x | 0.220 – 0.380 m |
 
 **343 structured training cases** were generated on a regular grid using a design-of-experiments approach.  
 **60 off-grid validation cases** were sampled with Latin hypercube sampling (LHS) and held out completely from training.
@@ -114,7 +114,7 @@ Validation is on 60 off-grid LHS cases, held out from all training.
 
 ![POD explained variance](results/final_project_outputs/figures/pod_mode_explained_variance.png)
 
-The POD surrogate captures the dominant free-surface evolution but is an approximate reduced-order reconstruction, not a CFD replacement. Sharp moving VOF interfaces are difficult to reconstruct exactly with a linear POD basis — the error panel in the GIF above shows this honestly.
+The POD surrogate captures the dominant free-surface evolution but is an approximate reduced-order reconstruction, not a CFD replacement. Sharp moving VOF interfaces are difficult to reconstruct exactly with a linear POD basis — particularly near the obstacle face, wall-contact regions, and thin-film contact lines — and the error panel in the GIF above shows this honestly.
 
 ---
 

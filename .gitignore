@@ -4,8 +4,8 @@ parametric_study/surrogate_database_cases/
 # Large field snapshot memmap
 results/surrogate_database/field_surrogate/alpha_snapshots_float32.dat
 
-# Intermediate frame images (GIFs are kept, raw frames are not)
-results/surrogate_database/portfolio_media/frames/
+# Intermediate working media (final curated outputs are in results/final_project_outputs/)
+results/surrogate_database/portfolio_media/
 
 # Python cache
 __pycache__/
